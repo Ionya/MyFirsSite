@@ -1,0 +1,8 @@
+<div *ngIf="news">
+    <img src={{news.image}} width="300px">
+    <h3>{{news.title}}</h3>
+    <p>{{news.text}}</p>
+    <button type="button" (click)="deleteNews()" [routerLink]="['/news']">Delete News</button>
+    <br>
+    <!-- <button type="button" (click)="" [routerLink]="">Update News</button> -->
+</div>

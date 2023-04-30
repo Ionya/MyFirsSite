@@ -1,0 +1,15 @@
+<h2>Events of Club</h2>
+
+<div class="gallery__background">
+    <div class="gallery__tab-content container is-gallery-expanded">
+      <a *ngFor="let event of events_list" class="gallery__card" [routerLink]="['/events', event.id]">
+        <img class="gallery__card-image lazyloaded" width="215" height="160" src="{{event.image}}">
+        <div class="gallery__card-body">
+          <div class="gallery__card-title">
+            {{event.name}}
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  

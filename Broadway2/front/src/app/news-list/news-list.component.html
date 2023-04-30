@@ -1,0 +1,21 @@
+<div class = "container">
+  <div class="row flex-grid flex-grid--bsrow">
+    <a class="link-111-444 flex-grid__item hover-fade col-xs-12 col-sm-6 col-md-4 mtx" *ngFor="let news of news_list" [routerLink]="['/news/', news.id]">
+      <div class="relative hover-fade__fadeto_black">
+        <img class="max-width hover-fade__fader" src="{{news.image}}">
+        <div class="thumb-mask">
+        </div>
+        <div class="overlay_bottom text-center">
+          <div class="inline-block pam futura-700-caps font-12-xs font-14-sm ls-norm red bg-gray-f9f">
+            News
+          </div>
+        </div>
+      </div>
+      <div class="museo-slab-700 font-18-xs font-22-sm ls-negative text-center ptl">
+        {{news.title}}
+      </div>
+    </a>
+
+  </div>
+</div>
+

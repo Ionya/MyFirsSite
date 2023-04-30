@@ -1,0 +1,366 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.showpage__hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 0px 0px;
+  gap: 24px;
+  background: #161616;
+  box-shadow: inset 0px 1px 0px #000;
+}
+
+body {
+  display:  flex;
+  flex-direction:  column;
+  background-color:  #ececef;
+  color:  #343540;
+  font-family:  -apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:  16px;
+  line-height:  1.25em;
+  min-height:  100%;
+  margin:  0;
+  -ms-overflow-style:  scrollbar;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+html {
+  height:   100%;
+  box-sizing:   border-box;
+  overflow-y:   scroll;
+  -webkit-font-smoothing:  antialiased;
+  -moz-osx-font-smoothing:  grayscale;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media (min-width: 544px){
+  .container {
+    max-width: 768px;
+    padding: 0 24px;
+  }
+}
+
+@media (min-width: 768px){
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 992px){
+  .container {
+    max-width: 970px;
+  }
+}
+
+@media (min-width: 1200px){
+  .container {
+    max-width: 1170px;
+  }
+}
+
+*,:before,:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.showpage__hero--content {
+  display: grid;
+  grid-template-areas: "poster title title" "poster title title" "poster price price";
+  column-gap: 24px;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto 1fr;
+  padding-bottom: 24px;
+  background-color: #343540;
+}
+
+.showpage__hero--poster-placeholder {
+  grid-area: poster;
+  height: 194px;
+  background: linear-gradient(320deg, #2b2c34 0%, #25262b 100%);
+  background-size: 400% 400%;
+  animation: loading-placeholder 2s ease-in infinite;
+}
+
+.showpage__hero--title-container {
+  grid-area: title;
+}
+
+.showpage__hero--price-ticket-container {
+  grid-area: price;
+  padding-top: 16px;
+  border-top: 1px solid #343540;
+  margin-top: 16px;
+}
+
+img {
+  vertical-align: middle;
+  -webkit-backface-visibility: hidden;
+  -ms-interpolation-mode: bicubic;
+}
+
+.lazyloaded {
+  opacity:  0;
+  -webkit-animation: fade-in 0.5s ease-in forwards;
+  -moz-animation: fade-in 0.5s ease-in forwards;
+  -ms-animation: fade-in 0.5s ease-in forwards;
+  -o-animation: fade-in 0.5s ease-in forwards;
+  animation: fade-in 0.5s ease-in forwards;
+}
+
+.showpage__hero--poster {
+  width: 128px;
+  height: 194px;
+  box-shadow: 0px 1px 2px 1px #000;
+}
+
+.showpage__hero--show-title {
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 1.125em;
+  color: #fff;
+  margin: 0;
+}
+
+.showpage__hero--show-desc {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.25em;
+  color: #fff;
+  margin-top: 8px;
+}
+
+.showpage__hero--price-ticket {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+}
+
+.showpage__hero--show-desc > p  {
+  margin: 0;
+}
+
+.showpage__hero--price-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 2px;
+}
+
+.showpage__hero--price-body1 {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1.125em;
+  color: #c5c6cd;
+}
+
+.showpage__hero--price-body2 {
+  display: flex;
+  align-items: flex-start;
+  font-weight: bold;
+  font-size: 12px;
+  color: #fff;
+  line-height: 1.25em;
+}
+
+.showpage__hero--btn {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 16px 24px;
+  width: 163px;
+  height: 50px;
+  background: #0068d9;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.125em;
+  transition: background 0.3s ease-in-out;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.showpage__hero--btn:hover {
+  background:  #064f9e;
+
+}
+
+
+@keyframes loading-placeholder {
+  0% {
+    background-position: 0% 0%;
+    background-position-x: 0%;
+    background-position-y: 0%;
+  }
+  50% {
+    background-position: 100% 90%;
+    background-position-x: 100%;
+    background-position-y: 90%;
+  }
+  100% {
+    background-position: 0% 0%;
+    background-position-x: 0%;
+    background-position-y: 0%;
+  }
+
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    opacity: 1;
+  }
+
+}
+/* These were inline style tags. Uses id+class to override almost everything */
+#style-zaVz3.style-zaVz3 {
+  font-weight: normal;
+}
+#style-pvQTH.style-pvQTH {
+  font-size: 22px;
+  line-height: 100%;
+}
+
+
+
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.showpage__contents {
+  background-color: #f9f9fa;
+}
+
+body {
+  display:  flex;
+  flex-direction:  column;
+  background-color:  #ececef;
+  color:  #343540;
+  font-family:  -apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:  16px;
+  line-height:  1.25em;
+  min-height:  100%;
+  margin:  0;
+  -ms-overflow-style:  scrollbar;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+html {
+  height:   100%;
+  box-sizing:   border-box;
+  overflow-y:   scroll;
+  -webkit-font-smoothing:  antialiased;
+  -moz-osx-font-smoothing:  grayscale;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media (min-width: 544px){
+  .container {
+    max-width: 768px;
+    padding: 0 24px;
+  }
+}
+
+@media (min-width: 768px){
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 992px){
+  .container {
+    max-width: 970px;
+  }
+}
+
+@media (min-width: 1200px){
+  .container {
+    max-width: 1170px;
+  }
+}
+
+*,:before,:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.showpage__about-the-show {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 48px 0;
+  color: #343540;
+}
+
+.showpage__contents > div:not(:last-child) .showpage__content__item  {
+  border-bottom: 1px solid #d7d8dd;
+}
+
+.showpage__heading {
+  flex: none;
+  width: 240px;
+  color: #343540;
+  font-size: 22px;
+  line-height: 1.25em;
+  margin: 0 24px 0 0;
+}
+
+.showpage__about-the-show--body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.showpage__about-the-show--show-dates {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.showpage__about-the-show--svg {
+  flex: none;
+  margin-right: 16px;
+}
+
+.showpage__about-the-show--content {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.25em;
+}
+
+

@@ -1,0 +1,20 @@
+<section class="homepage__featured-shows">
+    <div class="homepage__featured-shows-container">
+      <h2 class="featured-shows__heading">
+        Locations
+      </h2>
+      <div class="featured-shows-container style-orzom" id="style-orzom">
+        <div class="featured-shows-wrapper style-l4UDP" id="swiper-wrapper-476910a9c4f83bd9f">
+          <a *ngFor="let location of locations_list" class="featured-show" [routerLink]="['/locations', location.id]" href='{{location.url}}'>
+            <div class="featured-show__img-container">
+              <img class="featured-show__img lazyloaded" src="{{location.image}}" width="200" height="463">
+            </div>
+            <div class="featured-show__heading">
+              {{location.name}}
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </section>

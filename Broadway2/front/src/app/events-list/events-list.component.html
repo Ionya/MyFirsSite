@@ -1,0 +1,148 @@
+<div id="categoryBarContainer" class="category-bar-container style-cj1mn">
+  <div class="container">
+    <div id="categoryBar" class="category-bar style-6hOWc">
+      <div class="category-bar-wrapper">
+        <a id = "top" href="" class="category-bar__card current">
+          All Events
+        </a>
+        <a href="/shows/tickets/?category=broadway" class="category-bar__card">
+          KBTU
+        </a>
+        <a href="/shows/tickets/?category=off-broadway" class="category-bar__card">
+          Off-KBTU
+        </a>
+        <a href="/shows/tickets/?category=musical" class="category-bar__card">
+          Musicals
+        </a>
+        <a href="/shows/tickets/?category=classics" class="category-bar__card">
+          Classics
+        </a>
+      </div>
+      <span>
+      </span>
+    </div>
+  </div>
+</div>
+<div class="showlistpage__featured-shows-container">
+  <div class="container">
+    <h2>
+      Featured
+      Events
+    </h2>
+    <div class="showlistpage__featured-shows">
+      <div class="swiper-carousel style-VSjIl" id="showlistpageCarousel">
+        <div class="swiper-carousel-wrapper style-N5ioD" id="swiper-wrapper-d109b71e9610e7abbc">
+          <a class="swiper-carousel-card" href="/shows/bad-cinderella/" *ngFor="let event of top_list" [routerLink]="['/events-details/', event.id]">
+            <div class="showlistpage__featured-shows__card__media-tile" [routerLink]="['/events-details/', event.id]">
+              <img class="showlistpage__featured-shows__card__img lazyloaded" src="{{event.image}}">
+            </div>
+            <div class="showlistpage__featured-shows__card__body">
+              <div class="showlistpage__featured-shows__card__title">
+                {{event.name}}
+              </div>
+            </div>
+          </a>
+
+
+
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+<div class="showlistpage__bg-color" id = "all">
+  <div class="container">
+    <div class="showlistpage__title_and_sort">
+      <div>
+        <h1>
+          All KBTU Events
+        </h1>
+        <div>
+          <div>
+            62
+          </div>
+        </div>
+      </div>
+      <div class="showlistpage__title_and_sort--option-container">
+        <div class="showlistpage__title_and_sort--option-svg style-89w8x" id="style-89w8x">
+          <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 9.5L8 14.5L4 9.5H12ZM8 2.5L12 7.5H4L8 2.5Z" fill="#343540">
+            </path>
+          </svg>
+        </div>
+        <select id="selected-sort">
+          <option value="popular">
+            Popularity
+          </option>
+          <option value="a-z">
+            A-Z
+          </option>
+          \
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="showlistpage__bg-color">
+  <div class="container">
+    <div class="showlistpage__show-card-list">
+      <div class="card showlistpage__show-card-list--card-container" *ngFor="let event of events_list" [routerLink]="['/event', event.id]">
+        <div class="showlistpage__show-card-list--image-container" [routerLink]="['/events-details/', event.id]">
+          <a >
+            <img class="showlistpage__show-card-list--image lazyloaded" src="{{event.image}}">
+          </a>
+          <div class="showlistpage__show-card-list--show-info-container">
+            <div class="showlistpage__show-card-list--text-container">
+              <a class="showlistpage__show-card-list--show-title" [routerLink]="['/events-details/', event.id]">
+                {{event.name}}
+              </a>
+              <div class="showlistpage__show-card-list--show-description">
+                <p>
+                  {{event.description}}
+                </p>
+              </div>
+            </div>
+            <div class="showlistpage__show-card-list--pricing-container">
+
+              <span class="showlistpage__show-card-list--show-price-1">
+                {{event.likes}}
+              </span>
+              <span class="showlistpage__show-card-list--show-price-2">
+                {{event.dislikes}}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="showlistpage__show-card-list--btn-container">
+          <a [routerLink]="['/events-details/', event.id]" class="showlistpage__show-card-list--learn-more-btn">
+            Learn More
+          </a>
+          <a [routerLink]="['/payment-page/',event.id]" class="showlistpage__show-card-list--buy-ticket-btn">
+            Buy Tickets
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="back-to-top-container">
+  <svg height="16" viewBox="0 0 12 16" width="12" xmlns="http://www.w3.org/2000/svg">
+    <path d="m8 0 6 8h-5v8h-2v-8h-5z" fill="currentColor" fill-rule="evenodd" transform="translate(-2)">
+    </path>
+  </svg>
+  <span class="back-to-top-text" href = "#top">
+    Back to Top
+  </span>
+</div>
+

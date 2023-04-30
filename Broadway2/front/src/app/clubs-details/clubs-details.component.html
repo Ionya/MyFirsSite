@@ -1,0 +1,13 @@
+<div *ngIf="club">
+    <h1>{{club.name}}</h1>
+    <img src="{{club.logo}}" style="width: 300px;">
+    <p>{{club.description}}</p>
+
+    <button [routerLink]="['/clubs/' + club.id + '/events']">Show events of this club</button>
+    <br>
+    <br>
+    <button [routerLink]="['/clubs/' + club.id + '/news']">Show news of this club</button>
+    <br>
+    <br>
+    <button [routerLink]="['/clubs']" (click)="deleteClub()">Delete club</button>
+</div>

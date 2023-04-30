@@ -1,0 +1,19 @@
+<h2 id = "featured_news_heading">News of Club
+</h2>
+<div class="buzz__container--small">
+  <a *ngFor="let news of news_list" class="buzz__card--small" href="/buzz/203155/erich-bergen-will-rejoin-chicago-as-billy-flynn/" [routerLink]="['/news', news.id]">
+    <div class="buzz__image-container--small">
+      <img class="buzz__image--small lazyloaded" width="107" height="80" src="{{news.image}}">
+    </div>
+    <div class="buzz__text--small">
+      <div class="buzz__category">
+        news
+      </div>
+      <div class="buzz__title--small">
+        {{news.text}}
+      </div>
+    </div>
+  </a>
+  <div class="buzz__divider">
+  </div>
+</div>

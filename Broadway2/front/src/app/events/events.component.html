@@ -1,0 +1,62 @@
+
+
+
+
+<div class="gallery__background">
+  <div class="gallery__tab-content container is-gallery-expanded">
+    <a class="gallery__card" href="/shows/bob-fosses-dancin/" *ngFor="let event of main_events_list" [routerLink]="['/event',event.id]" >
+      <img class="gallery__card-image lazyloaded" width="215" height="160" src="{{event.image}}">
+      <div class="gallery__card-body">
+        <div class="gallery__card-title">
+          {{event.name}}
+        </div>
+      </div>
+    </a>
+
+    <a class="gallery__view-shows-card" href="https://www.broadway.com/shows/tickets/?category=broadway">
+      <svg width="20" height="35" class="snipcss0-3-107-108" fill="#C5C6CD" style="" viewBox="0 0 8 14" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1L0.96482 0L8 7L0.96482 14L0 13L6 7L0 1Z" fill="#C5C6CD">
+        </path>
+      </svg>
+    </a>
+    <div class="gallery__content-mask">
+      <button class="gallery__expand-button bwy-button-primary hidden">
+        View More
+      </button>
+    </div>
+    <a class="gallery__expanded-button bwy-button-primary" [routerLink]="['/events-list']">
+      Explore All Events
+    </a>
+    <div class="gallery__card-mask">
+    </div>
+  </div>
+  <div class="gallery__tab-content container hidden">
+    <a class="gallery__card" href="/shows/blue-man-group/">
+      <img class="gallery__card-image lazyload" width="215" height="160" src="https://static.broadway.com/img/placeholders/shows/poster-placeholder.863b7db440fb.png">
+      <div class="gallery__card-body">
+        <div class="gallery__card-title">
+          Blue Man Group
+        </div>
+      </div>
+    </a>
+    <a class="gallery__card" href="/shows/little-shop-horrors/">
+      <img class="gallery__card-image lazyload" width="215" height="160" src="https://static.broadway.com/img/placeholders/shows/poster-placeholder.863b7db440fb.png">
+      <div class="gallery__card-body">
+        <div class="gallery__card-title">
+          Little Shop of Horrors
+        </div>
+      </div>
+    </a>
+    <a class="gallery__view-shows-card" href="https://www.broadway.com/shows/tickets/?category=off-broadway">
+      <svg width="20" height="35" class="snipcss0-3-122-123" fill="#C5C6CD" style="" viewBox="0 0 8 14" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1L0.96482 0L8 7L0.96482 14L0 13L6 7L0 1Z" fill="#C5C6CD">
+        </path>
+      </svg>
+    </a>
+    <a class="gallery__explore-button bwy-button-primary" routerLink="['naverhu drugoi est']">
+      Explore All Events
+    </a>
+    <div class="gallery__card-mask">
+    </div>
+  </div>
+</div>

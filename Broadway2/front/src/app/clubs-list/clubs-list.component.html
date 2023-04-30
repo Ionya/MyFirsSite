@@ -1,0 +1,8 @@
+<section>
+  <div class="club" *ngFor="let club of clubs_list" [routerLink]="['/clubs/', club.id]">
+    <img src="{{club.logo}}" alt="Club 1">
+    <h3>{{club.name}}</h3>
+    <p>{{club.description}}</p>
+  </div>
+
+</section>

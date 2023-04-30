@@ -1,0 +1,9 @@
+<div *ngIf="location">
+    <h1>{{location.name}}</h1>
+    <img src="{{location.image}}" style="width: 300px;">
+    <button [routerLink]="['/locations/' + location.id + '/events']">Show events of this location</button>
+    <br>
+    <br>
+
+    <button [routerLink]="['/locations']" (click)="deleteLocation()">Delete club</button>
+</div>

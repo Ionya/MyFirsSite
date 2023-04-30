@@ -1,0 +1,42 @@
+<div class="bg-grey-10 grey-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 relative">
+        <div class="micro-mrl mbl" *ngIf="ticket">
+          <img class="left relative font-12 ShowHeader__poster__ASOOB" src="{{ticket.event.image}}">
+        </div>
+        <div class="flex-direction-column mbl">
+          <div class="mbm">
+            <h1 class="system-font inline-block mvn ShowHeader__show-name__c-Zyj" *ngIf="ticket">
+              {{ticket.event.name}}
+              <span class="system-font regular">
+                Tickets
+              </span>
+            </h1>
+          </div>
+          <div class="font-xs flex align-items-center lh-sm">
+            <button class="btn flex font-xs align-items-center mrm ShowHeader__more-info__TmBcF" href="#">
+              <strong>
+                Show Info
+              </strong>
+            </button>
+            <div class="css-sumro7">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="css-1glu7ev">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 2c2.211 0 4 1.878 4 4.2C12 9.35 8 14 8 14S4 9.35 4 6.2C4 3.878 5.789 2 8 2zm0 2a2 2 0 10.001 4.001A2 2 0 008 4z" fill="currentColor">
+                </path>
+              </svg>
+              <span class="css-lgbo0i" *ngIf="ticket">
+                {{ticket.event.description}}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+
+  Misha do something
+</div>
+
